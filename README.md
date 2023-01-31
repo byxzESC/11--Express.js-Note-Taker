@@ -6,10 +6,9 @@
 
 ## Description
 
-    It is a simple team profile generator using command prompt. 
+    It is a simple note taker application deployed on heroku. 
 
-    Enter your team's information and this generator will generate a HTML page 
-    for your team members.      
+    Enter your Notes and able to delete or read to your previous notes.      
 
 ## Table of Contents (Optional)
 

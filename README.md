@@ -3,12 +3,15 @@
 ![js badge](https://img.shields.io/badge/TECHOLOGY-JAVASCRIPT%20ES6-orange)
 ![node.js badge](https://img.shields.io/badge/TECHOLOGY-NODE.JS%20V16-success)
 ![jest badge](https://img.shields.io/badge/TECHOLOGY-UUID-orange)
+![heroku](https://img.shields.io/badge/TECHOLOGY-HEROKU%20PLATFORM-blue)
 
 ## Description
 
     It is a simple note taker application deployed on heroku. 
+    Enter your Notes and able to delete or read to your previous notes. 
+    It is being deployed on Heroku.   
 
-    Enter your Notes and able to delete or read to your previous notes.      
+  [Deployed HERE](https://mysterious-badlands-64903.herokuapp.com/)
 
 ## Table of Contents (Optional)
 
@@ -27,19 +30,12 @@ To install necessary dependencies, run the following command:
 
 ## Usage
 
-Step1: run following command in your terminal:
-    node index.js 
+Step1: Visit [Here](https://mysterious-badlands-64903.herokuapp.com/) to access the app
 
-step 2: type in your information to the prompt
+step 2: type in your notes in the right side, and manage previous notes on the left column.
     example:
 ![example](./images/example.JPG)
 
-#
-    The team profile
-![team obj](./images/team%20object.JPG)
-#
-    HTML structure
-![html structure](./images/html%20structure.JPG)
 
 ## License
 
@@ -51,6 +47,4 @@ N/A
 
 ## Tests
 
-To run jest tests, run the following command: 
-    
-    npm run test
+N/A

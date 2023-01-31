@@ -50,6 +50,8 @@ const deleteNote = (id) =>
     },
   });
 
+// ACCEPTANCE CRITERIA --- WHEN I click on an existing note in the list in the left-hand column
+// THEN that note appears in the right-hand column
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
@@ -98,17 +100,20 @@ const handleNoteDelete = (e) => {
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
   e.preventDefault();
-  console.log(`e target parent element is ${e.target.parentElement}`);
   activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
   renderActiveNote();
 };
 
+// ACCEPTANCE CRITERIA ---  WHEN I click on the Write icon in the navigation at the top of the page
+// THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 // Sets the activeNote to and empty object and allows the user to enter a new note
 const handleNewNoteView = (e) => {
   activeNote = {};
   renderActiveNote();
 };
 
+// ACCEPTANCE CRITERIA --- WHEN I enter a new note title and the note’s text
+// THEN a Save icon appears in the navigation at the top of the page
 const handleRenderSaveBtn = () => {
   if (!noteTitle.value.trim() || !noteText.value.trim()) {
     hide(saveNoteBtn);
@@ -174,6 +179,8 @@ const renderNoteList = async (notes) => {
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
+// ACCEPTANCE CRITERIA --- WHEN I click on the Save icon
+// THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);

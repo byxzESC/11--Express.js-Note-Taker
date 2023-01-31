@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 const { readFromFile, readAndAppend, deleteToFile } = require('./helperFunctions/fsUtils')
 
 const app = express();
-const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -35,17 +35,14 @@ app.get('/api/notes', (req, res) => {
 // posting notes
 app.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to add a note, line 33 server.js`);
-
     const { title, text } = req.body;
     
     if (title && text) {
-
         const newNote = { 
             title, 
             text,
             id: uuidv4()
         };
-        console.log('type for newNote is ', typeof newNote, newNote)
         readAndAppend(newNote, './db/db.json');
 
         const response = {
